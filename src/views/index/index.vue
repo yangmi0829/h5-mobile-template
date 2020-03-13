@@ -1,8 +1,8 @@
 <template>
-  <fragment>
+  <div>
     <van-button type="primary" @click="show = true">切换主题{{theme}}</van-button>
     <van-action-sheet v-model="show" :actions="actions" @select="changeTheme" />
-  </fragment>
+  </div>
 </template>
 
 <script>
