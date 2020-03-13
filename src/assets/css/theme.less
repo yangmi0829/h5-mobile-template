@@ -1,0 +1,16 @@
+
+@import "./variable";
+// 主题class前缀
+@theme_prefix: theme--;
+
+.@{theme_prefix}default{
+  .theme(@theme-color--default)
+}
+
+.@{theme_prefix}dark{
+  .theme(@theme-color--dark)
+}
+
+:export {
+  THEME_PREFIX: @theme_prefix
+}
