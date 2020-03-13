@@ -4,13 +4,19 @@
 @theme_prefix: theme--;
 
 .@{theme_prefix}default{
-  .theme(@theme-color--default)
+  .theme(@theme-color--default);
+  .van-nav-bar,.van-tabbar{
+    background-color: @theme-color--default;
+  }
 }
 
 .@{theme_prefix}dark{
-  .theme(@theme-color--dark)
+  .theme(@theme-color--dark);
+  .van-nav-bar,.van-tabbar{
+    background-color: @theme-color--dark;
+  }
 }
 
 :export {
-  THEME_PREFIX: @theme_prefix
+  THEME_PREFIX: @theme_prefix;
 }

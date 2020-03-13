@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-button type="primary" @click="show = true">切换背景色{{theme}}</van-button>
+    <van-button type="primary" @click="show = true">切换主题{{theme}}</van-button>
     <van-action-sheet v-model="show" :actions="actions" @select="changeTheme" />
   </div>
 </template>
