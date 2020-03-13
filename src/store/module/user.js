@@ -4,10 +4,15 @@ const module = {
     userinfo: {}
   },
   mutations: {
+    SET_USERINFO({state}, val){
+      state.userinfo = val
+    }
   },
   actions: {
-  },
-  getters: {  }
+    set_userinfo({commit}, val){
+      commit('SET_USERINFO', val)
+    }
+  }
 }
 
 export default module

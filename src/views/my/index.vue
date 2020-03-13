@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <fragment>
     我的
-  </div>
+  </fragment>
 </template>
 
 <script>

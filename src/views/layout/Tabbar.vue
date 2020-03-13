@@ -46,9 +46,14 @@
       }
     },
     watch: {
-      curRouter({name:newName}, {name:oldName}){
-        if(newName !== oldName && newName !== this.active){
-          this.active = newName
+      curRouter:{
+        immediate: true,
+        handler(newVal, oldVal){
+          const {name:newName} = newVal||{}
+          const {name:oldName} = oldVal||{}
+          if(newName !== oldName && newName !== this.active){
+            this.active = newName
+          }
         }
       }
     }

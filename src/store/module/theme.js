@@ -22,8 +22,7 @@ const module = {
     change_theme({commit}, val){
       commit('SET_THEME', val)
     }
-  },
-  getters: {  }
+  }
 }
 
 export default module

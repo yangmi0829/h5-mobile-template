@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <fragment>
     <nav-bar></nav-bar>
     <div class="body">
       <router-view></router-view>
     </div>
     <tabbar></tabbar>
-  </div>
+  </fragment>
 </template>
 
 <style scoped lang="less">

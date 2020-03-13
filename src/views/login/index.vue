@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <fragment>
       <router-link to="/index">
         login
       </router-link>
-    </div>
+    </fragment>
 </template>
 
 <script>
