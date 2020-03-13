@@ -4,22 +4,11 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 function getAllRouters () {
-  let routers = []
-  const all = require.context('./', false, /.router.js$/)
-  all.keys().forEach(item => routers = routers.concat(all(item).default))
-  return routers
+  const moduleFiles = require.context('./', false, /.router.js$/)
+  return moduleFiles.keys().reduce((cur,key) => cur.concat(moduleFiles(key).default),[])
 }
 
-
 const routes = [
-  {
-    path: '/',
-    redirect: '/index'
-  },
-  {
-    path: '/login',
-    component: () => import('../views/login')
-  },
   ...getAllRouters()
 ]
 

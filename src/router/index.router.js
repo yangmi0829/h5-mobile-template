@@ -1,8 +1,10 @@
+import {Home} from "./base.router";
+
 const Index = () => import('../views/index')
 
 const routes = [
   {
-    component:() => import('../views/layout/Home'),
+    component:Home,
     path: '/',
     children: [
       {

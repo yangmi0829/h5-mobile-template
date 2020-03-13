@@ -1,8 +1,10 @@
+import {Home} from "./base.router";
+
 const My = () => import('../views/my')
 
 const routes = [
   {
-    component:() => import('../views/layout/Home'),
+    component:Home,
     path: '/',
     children: [
       {
