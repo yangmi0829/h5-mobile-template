@@ -2,6 +2,9 @@
   <div>
     <van-button type="primary" @click="show = true">切换主题{{theme}}</van-button>
     <van-action-sheet v-model="show" :actions="actions" @select="changeTheme" />
+    <router-link to="/detail">
+      <van-button>跳转到有返回按钮的页面</van-button>
+    </router-link>
   </div>
 </template>
 

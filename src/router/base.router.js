@@ -8,7 +8,8 @@ const routes = [
   },
   {
     path: '/login',
-    component: () => import('../views/login')
+    component: () => import('../views/login'),
+    meta: { showBackIcon: false}
   },
 ]
 

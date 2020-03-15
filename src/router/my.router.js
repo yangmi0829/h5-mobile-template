@@ -11,7 +11,7 @@ const routes = [
         path: 'my',
         component: My,
         name: 'My',
-        meta: { title: '我的'}
+        meta: { title: '我的', showBackIcon: false}
       }
     ]
   }

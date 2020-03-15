@@ -29,7 +29,7 @@
         return (this.$route.meta || {}) .title
       },
       showBackIcon(){
-        return window.history.length > 1
+        return (this.$route.meta || {}).showBackIcon != false
       }
     }
   }
