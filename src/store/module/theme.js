@@ -1,4 +1,7 @@
-import {THEME_PREFIX} from '../../assets/css/theme.less'
+import {THEME_PREFIX} from '../../assets/theme/mixin.less'
+//主题
+import setTheme from '@/config/theme';
+
 const module = {
   namespaced: true,
   state: {
@@ -15,6 +18,7 @@ const module = {
         }
       })
       classList.add(newTheme)
+      setTheme(val)
       state.theme = val
     }
   },

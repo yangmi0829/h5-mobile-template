@@ -17,5 +17,16 @@ module.exports = {
       preProcessor: 'less',
       patterns: [path.resolve(__dirname, 'src/assets/css/mixin.less')]
     }
+  },
+  chainWebpack(config) {
+    // 换肤loader[less]
+    const less = config.module.rule('less').toConfig();
+    const useable_less = { ...less.oneOf[3], test: /\.theme\.less$/ };
+    useable_less.use = [...useable_less.use];
+    // useable_less.use[0] = { loader: 'style-loader', options: { injectType: 'lazySingletonStyleTag' } };
+    useable_less.use.unshift({ loader: 'style-loader', options: { injectType: 'lazySingletonStyleTag' } });
+    config.module.rule('less').merge({
+      oneOf: [useable_less]
+    });
   }
 }
