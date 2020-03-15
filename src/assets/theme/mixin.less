@@ -1,0 +1,23 @@
+// 引入vant 默认变量
+@import "~vant/lib/style/var";
+// 主题class前缀
+@theme_prefix: theme--;
+
+@theme-color:@white;
+
+.theme(@theme-color:white){
+  background-color: @theme-color;
+  .van-nav-bar{
+    background-color: @nav-bar-background-color;
+  }
+  .van-nav-bar__title{
+    color: @nav-bar-title-text-color;
+  }
+  .van-tabbar{
+    background-color:@tabbar-background-color;
+  }
+}
+
+:export {
+  THEME_PREFIX: @theme_prefix;
+}
