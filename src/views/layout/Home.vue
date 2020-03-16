@@ -18,11 +18,10 @@
   }
 </style>
 <script>
-  import NavBar from './NavBar'
-  import Tabbar from './Tabbar'
-  import Home from './Home'
-  export default {
-    name: 'Home',
-    components: { Home, Tabbar, NavBar }
-  }
+import NavBar from './NavBar'
+import Tabbar from './Tabbar'
+export default {
+  name: 'Home',
+  components: { Tabbar, NavBar }
+}
 </script>

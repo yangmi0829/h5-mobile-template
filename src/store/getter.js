@@ -1,6 +1,6 @@
 import theme from './module/theme'
 const getter = {
-  theme(){
+  theme () {
     return theme.state.theme
   }
 }

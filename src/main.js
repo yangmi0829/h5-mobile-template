@@ -9,7 +9,6 @@ import { Plugin } from 'vue-fragment'
 import 'amfe-flexible/index.js'
 import './assets/css/index.less'
 
-
 Vue.config.productionTip = false
 
 Vue.use(Plugin)

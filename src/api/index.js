@@ -1,7 +1,7 @@
 import request from '../request'
 
 const API = {
-  test(){
+  test () {
     return request.get('/test')
   }
 }

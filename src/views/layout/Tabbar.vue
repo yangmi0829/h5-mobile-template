@@ -14,50 +14,50 @@
 </template>
 
 <script>
-  import { Tabbar, TabbarItem } from 'vant';
-  export default {
-    name: 'Tabbar',
-    components: {
-      [TabbarItem.name]:TabbarItem,
-      [Tabbar.name]:Tabbar,
-    },
-    data() {
-      return {
-        active: 'Index',
-        tabbarList: [
-          {
-            name: 'Index',
-            to: '/index',
-            icon: 'wap-home-o',
-            text: '首页'
-          },
-          {
-            name: 'My',
-            to: '/my',
-            icon: 'user-o',
-            text: '我的'
-          }
-        ]
-      }
-    },
-    computed:{
-      curRouter(){
-        return this.$route
-      }
-    },
-    watch: {
-      curRouter:{
-        immediate: true,
-        handler(newVal, oldVal){
-          const {name:newName} = newVal||{}
-          const {name:oldName} = oldVal||{}
-          if(newName !== oldName && newName !== this.active){
-            this.active = newName
-          }
+import { Tabbar, TabbarItem } from 'vant'
+export default {
+  name: 'Tabbar',
+  components: {
+    [TabbarItem.name]: TabbarItem,
+    [Tabbar.name]: Tabbar
+  },
+  data () {
+    return {
+      active: 'Index',
+      tabbarList: [
+        {
+          name: 'Index',
+          to: '/index',
+          icon: 'wap-home-o',
+          text: '首页'
+        },
+        {
+          name: 'My',
+          to: '/my',
+          icon: 'user-o',
+          text: '我的'
+        }
+      ]
+    }
+  },
+  computed: {
+    curRouter () {
+      return this.$route
+    }
+  },
+  watch: {
+    curRouter: {
+      immediate: true,
+      handler (newVal, oldVal) {
+        const { name: newName } = newVal || {}
+        const { name: oldName } = oldVal || {}
+        if (newName !== oldName && newName !== this.active) {
+          this.active = newName
         }
       }
     }
   }
+}
 </script>
 
 <style scoped>

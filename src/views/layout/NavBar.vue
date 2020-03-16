@@ -10,29 +10,29 @@
 </template>
 
 <script>
-  import { NavBar } from 'vant';
-  export default {
-    name: 'NavBar',
-    components: {
-      [NavBar.name]: NavBar
+import { NavBar } from 'vant'
+export default {
+  name: 'NavBar',
+  components: {
+    [NavBar.name]: NavBar
+  },
+  methods: {
+    onClickLeft () {
+      this.$router.back()
     },
-    methods: {
-      onClickLeft() {
-        this.$router.back()
-      },
-      onClickRight() {
-        this.$toast('按钮');
-      }
+    onClickRight () {
+      this.$toast('按钮')
+    }
+  },
+  computed: {
+    title () {
+      return (this.$route.meta || {}).title
     },
-    computed: {
-      title(){
-        return (this.$route.meta || {}) .title
-      },
-      showBackIcon(){
-        return (this.$route.meta || {}).showBackIcon != false
-      }
+    showBackIcon () {
+      return (this.$route.meta || {}).showBackIcon !== false
     }
   }
+}
 </script>
 
 <style scoped>

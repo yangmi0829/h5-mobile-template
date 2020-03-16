@@ -5,7 +5,7 @@ Vue.use(VueRouter)
 
 function getAllRouters () {
   const moduleFiles = require.context('./', false, /.router.js$/)
-  return moduleFiles.keys().reduce((cur,key) => cur.concat(moduleFiles(key).default),[])
+  return moduleFiles.keys().reduce((cur, key) => cur.concat(moduleFiles(key).default), [])
 }
 
 const routes = [

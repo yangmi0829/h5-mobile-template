@@ -1,34 +1,26 @@
-const themeCache = {};
+const themeCache = {}
 
-const themeAction = {
-    /** 默认主题 */
-    default() {
-        if (!themeCache.default) {
-            themeCache.default = [
-                require('@/assets/theme/default/index.theme.less')
-            ];
-        }
-        return themeCache.default;
-    },
-    dark() {
-        if (!themeCache.dark) {
-            themeCache.dark = [
-                require('@/assets/theme/dark/index.theme.less')
-            ];
-        }
-        return themeCache.dark;
+const themeAction = {}
+
+const themes = ['default', 'dark']
+
+themes.forEach(theme => {
+  themeAction[theme] = () => {
+    if (!themeCache[theme]) {
+      themeCache[theme] = [require(`@/assets/theme/${theme}/index.theme.less`)]
     }
-};
-
+    return themeCache[theme]
+  }
+})
 /** 当前主题 */
-let currentTheme = [];
+let currentTheme = []
 
 /** 设置主题 */
-export default async function setTheme(theme) {
-    if (themeAction[theme]) {
-        const style = await themeAction[theme]();
-        currentTheme.forEach(i => i.unuse());
-        style.forEach(i => i.use());
-        currentTheme = style;
-    }
+export default async function setTheme (theme) {
+  if (themeAction[theme]) {
+    const style = await themeAction[theme]()
+    currentTheme.forEach(i => i.unuse())
+    style.forEach(i => i.use())
+    currentTheme = style
+  }
 }

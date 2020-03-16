@@ -9,8 +9,8 @@ const routes = [
   {
     path: '/login',
     component: () => import('../views/login'),
-    meta: { showBackIcon: false}
-  },
+    meta: { showBackIcon: false }
+  }
 ]
 
 export default routes

@@ -1,6 +1,6 @@
-import {THEME_PREFIX} from '../../assets/theme/mixin.less'
-//主题
-import setTheme from '@/config/theme';
+import { THEME_PREFIX } from '../../assets/theme/mixin.less'
+// 主题
+import setTheme from '@/config/theme'
 
 const module = {
   namespaced: true,
@@ -8,12 +8,12 @@ const module = {
     theme: 'default'
   },
   mutations: {
-    SET_THEME(state, val){
+    SET_THEME (state, val) {
       const classList = document.body.classList
       const newTheme = `${THEME_PREFIX}${val}`
-      if(classList.contains(newTheme))return
+      if (classList.contains(newTheme)) return
       document.body.classList.forEach(cls => {
-        if(/^theme-/.test(cls)){
+        if (/^theme-/.test(cls)) {
           classList.remove(cls)
         }
       })
@@ -23,7 +23,7 @@ const module = {
     }
   },
   actions: {
-    change_theme({commit}, val){
+    change_theme ({ commit }, val) {
       commit('SET_THEME', val)
     }
   }

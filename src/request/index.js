@@ -13,6 +13,6 @@ request.interceptors.response.use(
     return response.data
   },
   Promise.reject
-  )
+)
 
 export default request
