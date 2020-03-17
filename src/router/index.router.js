@@ -12,7 +12,7 @@ const routes = [
         path: 'index',
         component: Index,
         name: 'Index',
-        meta: { title: '首页', showBackIcon: false }
+        meta: { title: '首页', showBackIcon: false, tabbar: true }
       },
       {
         path: 'detail',

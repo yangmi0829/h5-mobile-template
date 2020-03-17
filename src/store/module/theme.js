@@ -8,7 +8,7 @@ const module = {
   },
   mutations: {
     SET_THEME (state, val) {
-      if(state.theme === val)return
+      if (state.theme === val) return
       setTheme(val)
       state.theme = val
     }
