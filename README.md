@@ -1,7 +1,7 @@
 ### 内置样式
 + 文本显示  
 
-| 名称 | css |
+| 名称 | css | 
 |:---:|:---:|
 |显示一行|van-ellipsis|
 |显示两行|van-multi-ellipsis--l2|
